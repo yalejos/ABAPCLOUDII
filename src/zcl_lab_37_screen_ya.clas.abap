@@ -1,0 +1,25 @@
+CLASS zcl_lab_37_screen_ya DEFINITION
+  PUBLIC
+  FINAL
+  CREATE PUBLIC .
+
+  PUBLIC SECTION.
+    METHODS: set_SCREEN_TYPE IMPORTING iv_SCREEN_TYPE TYPE string,
+      get_SCREEN_TYPE RETURNING VALUE(rv_SCREEN_TYPE) TYPE string.
+PROTECTED SECTION.
+  PRIVATE SECTION.
+    DATA SCREEN_TYPE tyPE string.
+ENDCLASS.
+
+
+
+CLASS zcl_lab_37_screen_ya IMPLEMENTATION.
+  METHOD get_screen_type.
+    rv_SCREEN_TYPE = me->screen_type.
+  ENDMETHOD.
+
+  METHOD set_screen_type.
+    me->screen_type = iv_SCREEN_TYPE.
+  ENDMETHOD.
+
+ENDCLASS.
